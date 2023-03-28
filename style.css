@@ -1,29 +1,50 @@
-* {
+ 
+  body {
+    background: rgb(119, 223, 223);
     font-family: 'Alkatra', cursive;
-    background-color: rgb(96, 199, 199);
-    margin: 0.5em;
-    padding: auto;
-}
+    height:100%;
+    text-align:center;
+    font-size:18px;
+  }
+   
+  canvas{
+    color:white;
+    border: white dashed 2px;
+    padding:15px;
+  }
 
-#header {
-    font-size: 33px;
-    text-align: center;
-}
+  #alphabet {
+    margin:15px auto;
+    padding:0;
+    max-width:900px;
+  }
+  
+  #alphabet li {
+    float:left;
+    margin: 0 10px 10px 0;
+    list-style:none;
+    width:35px;
+    height:50px;
+    padding-top:10px;
+    background: white;
+    cursor:pointer;
+    border: solid 3px black;
+  }
 
-#newGame {
+  #my-word li {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    font-size:55px;
+  }
+  #reset, #hint {
     background-color: orange;
-    border: none;
+    border: black;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 15px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 28px;
-    border-radius: 8px;
-    width: 100%;
+    border-radius: 16px;
+    width: 50%;
 }
-
-.btn, .btn-primary {
-    background-color: rgb(15, 69, 90);
-}
-

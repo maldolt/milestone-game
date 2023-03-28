@@ -20,21 +20,43 @@ const init = function(state) {
     letters = document.querySelectorAll('.alpha');
 
 }*/
-//possible method of letters from (cathydutton)
-var alphabet = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
-                'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
-                't', 'u', 'v', 'w', 'x', 'y', 'z'];
-var buttons = fucntion() {
-    myButtons = document.getElementsbyId('leter-div');
-    letters = document.createElement('ul');
+/* possible method of letters from (cathydutton)*/
 
-    for (var i = 0; i < alphabet.length; i++) {
+window.onload = function () {
+    var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+        'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
+        't', 'u', 'v', 'w', 'x', 'y', 'z'];
+
+
+    var buttons = function () {
+        myButtons = document.getElementById('buttons');
+        letters = document.createElement('ul');
+
+        for (var i = 0; i < alphabet.length; i++) {
         letters.id = 'alphabet';
-        list = docuemtn.createElement('li)');
+        list = document.createElement('li');
         list.id = 'letter';
         list.innerHTML = alphabet[i];
         check();
         myButtons.appendChild(letters);
         letters.appendChild(list);
+        }
     }
-}                
+    result = function () {
+        wordHolder = document.getElementById('hold');
+        correct = document.createElement('ul');
+
+        for (var i = 0; i < word.length; i++) {
+        correct.setAttribute('id', 'my-word');
+        guess = document.createElement('li');
+        guess.setAttribute('class', 'guess');
+        if (word[i] === "-") {
+            guess.innerHTML = "-";
+            space = 1;
+        } else {
+            guess.innerHTML = "_";
+        }
+
+        }
+    }    
+}

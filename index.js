@@ -1,4 +1,4 @@
-/* possible method of letters from (cathydutton)
+// possible method of letters from (cathydutton)
 
 window.onload = function () {
     let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
@@ -6,7 +6,12 @@ window.onload = function () {
         't', 'u', 'v', 'w', 'x', 'y', 'z'];
         
 
-    let words =['whale', 'turtle', 'fish' ]
+    let words =['whale', 'turtle', 'fish' ];
+    let word = words[Math.floor(Math.random() * words.length)];
+
+    let guesses = [];
+    let remaining = 6;
+    let gameover = false;
 
     let buttons = function() {
         myButtons = document.getElementById('buttons');
@@ -17,20 +22,29 @@ window.onload = function () {
             list = document.createElement('li');
             list.id = 'letter';
             list.innerHTML = alphabet[i];
+            myButtons.appendChild(letters);
+            letters.appendChild(list);
         }
     }
-}*/
+    result = funtion () {
+        wordHolder = document.getElementById('hold');
+        correct = document.createElement('ul');
 
-var buttonsContainer = document.getElementById("buttons");
+        for (let i = 0; i < word.length; i++){
+            correct.setAttribute('id', 'my-word');
+            guess = document.createElement('li');
+            guess.setAttribute('class', 'guess');
+            if (word[i] === "_") {
+                guess.innerHTML = "_";
+                space = 1;
+            } else { 
+                guess.innerHTML = "_";
+            }
 
-
-var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-
-for (var i = 0; i < alphabet.length; i++) {
-  var button = document.createElement("button"); 
-  button.innerHTML = alphabet[i]; 
-  button.addEventListener("click", function() { 
-    alert("You clicked the letter " + this.innerHTML); 
-  });
-  buttonsContainer.appendChild(button); 
+            guesses.push(guess);
+            wordHolder.appendChild(correct);
+            corect.appendChild(guess);
+        }
+    }   buttons();
+        result();
 }

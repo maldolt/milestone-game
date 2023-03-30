@@ -9,13 +9,14 @@ window.onload = function () {
     let words =['whale', 'turtle', 'fish' ];
     let word = words[Math.floor(Math.random() * words.length)];
 
+    let counter = 0;
     let guesses = [];
     let remainingLives = 6;
-    let gameover = false;
+    let showLives = document.getElementById("myLives");
 
-
-
-    let buttons = function() {
+    let list;
+    
+    buttons = function() {
         myButtons = document.getElementById('buttons');
         letters = document.createElement('ul');
 
@@ -30,7 +31,7 @@ window.onload = function () {
     }
     result = function () {
         let space = 0;
-        wordHolder = document.getElementById('hold');
+        wordHolder = document.getElementById("hold");
         correct = document.createElement('ul');
 
         for (var i = 0; i < word.length; i++){
@@ -51,7 +52,7 @@ window.onload = function () {
     }
     //lives
     remaining = function() {
-        showLives.innerHTML = "You have" + remainingLives + "lives";
+        showLives.innerHTML = "You have " + remainingLives + " lives!";
         if (remainingLives < 1) {
             showLives.innerHTML = "You did not win";
         }
@@ -61,8 +62,33 @@ window.onload = function () {
             }
         }
     }   
-    
+    check = function (){
+        letters = document.querySelectorAll('alphabet li');
+        for(let i = 0; i < letters.length; i ++){
+           letters.onclick = function(){
+            let guess = (this.innerHTML);
+            this.setAttribute("class", "active");
+            this.onclick = null;
+            for (let i = 0; i < word.length; i ++){
+                if(word[i] === guess) {
+                    guesses[i].innerHTML = guess;
+                    counter += 1;
+                }
+            }
+            let x = (word.indexOf(guess));
+            if(x === -1) {
+                lives -= 1;
+            } else {
+                remaining();
+            }
+        } 
+        }
+        
+    }
+
+
     buttons();
     result();
     remaining();
+    counter();
 }

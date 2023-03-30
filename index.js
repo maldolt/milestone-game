@@ -10,8 +10,10 @@ window.onload = function () {
     let word = words[Math.floor(Math.random() * words.length)];
 
     let guesses = [];
-    let remaining = 6;
+    let remainingLives = 6;
     let gameover = false;
+
+
 
     let buttons = function() {
         myButtons = document.getElementById('buttons');
@@ -26,11 +28,12 @@ window.onload = function () {
             letters.appendChild(list);
         }
     }
-    result = funtion () {
+    result = function () {
+        let space = 0;
         wordHolder = document.getElementById('hold');
         correct = document.createElement('ul');
 
-        for (let i = 0; i < word.length; i++){
+        for (var i = 0; i < word.length; i++){
             correct.setAttribute('id', 'my-word');
             guess = document.createElement('li');
             guess.setAttribute('class', 'guess');
@@ -43,8 +46,23 @@ window.onload = function () {
 
             guesses.push(guess);
             wordHolder.appendChild(correct);
-            corect.appendChild(guess);
+            correct.appendChild(guess);
         }
-    }   buttons();
-        result();
+    }
+    //lives
+    remaining = function() {
+        showLives.innerHTML = "You have" + remainingLives + "lives";
+        if (remainingLives < 1) {
+            showLives.innerHTML = "You did not win";
+        }
+        for (let i = 0; i < guesses.length; i++){
+            if (counter + space === guesses.length){
+                showLives.innerHTML = "Won!";
+            }
+        }
+    }   
+    
+    buttons();
+    result();
+    remaining();
 }

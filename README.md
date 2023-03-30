@@ -22,6 +22,7 @@ Lives
 -6 lives
 -need to appear when wrong letter is clicked
 -Parts: head, body, 2 arms, 2 legs
+*** maybe only have lives and no body parts???
 
 End of Game
 

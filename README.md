@@ -1,6 +1,6 @@
 Hangman game about animals for kids ages 6-10
 
-Git hub Resource for Letter formation (cathydutton)
+Git hub Resource for Game idea (cathydutton)
 https://codepen.io/cathydutton/details/JjpxMm
 
 Tasks to do:

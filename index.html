@@ -11,6 +11,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="work"></div>   
+    <div class="work">
+      <h1>Hangman Game</h1>
+      <h2>How to Play:</h2>
+      <h3>Guess the animal by choosing a letter. You have 6 lives. Good Luck! 😊</h3>
+      <hr>
+      <p id="clue">Clue: Ocean Animal</p>
+      <!--Add Canvas for Hangman-->
+      <canvas id="my-canvas" width="200" height="200"></canvas>
+      <!--Buttons for Letters-->
+      <div class="letter-div"></div>
+      <div class="word-div"></div>
+      <h3>Remaining Lives: <span class="lives">6</span></h3>
+      <button class="reset">Play Again</button>
+    </div>  
+    <!--Window that shows after game is over (in progress)-->
+    <div class="notification">
+      <p>Game Over</p>
+      <p class="notification-result">You Won!🎉</p>
+      <p>Correct Word: </p>
+      <button class="notification-botton">Play Again</button>
+    </div> 
 </body>
 </html>

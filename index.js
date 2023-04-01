@@ -1,1 +1,6 @@
-// STARTING ALL OVER WORK!!!
+//Declare variables from divs in HTML
+
+
+
+
+

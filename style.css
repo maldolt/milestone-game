@@ -1,7 +1,39 @@
-work {
+body {
   background: rgb(119, 223, 223);
   font-family: 'Alkatra', cursive;
-  height:100%;
   text-align: center;
-  font-size:18px;
+  font-size:20px;
+}
+canvas{
+  color:white;
+  border: white solid 4px;
+  padding:15px;
+}
+
+.work {
+  width: fit-content;
+  margin: auto;
+}
+
+button {
+  background-color: orange;
+  border: black;
+  color: white;
+  padding: 15px 15px;
+  margin-left: auto;
+  text-decoration: none;
+  font-size: 28px;
+  font-family: 'Alkatra', cursive;
+  border-radius: 16px;
+  width: 50%;
+}
+
+.notification {
+  position: absolute;
+  font-size: 30px;
+  border-radius: 16px;
+  box-shadow: 10px 10px 5px rgb(176, 238, 249);
+  width: 30rem;
+  padding: 30px 50px;
+  background-color: rgb(26, 153, 149);
 }

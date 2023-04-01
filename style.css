@@ -1,52 +1,88 @@
- 
-  body {
-    background: rgb(119, 223, 223);
-    font-family: 'Alkatra', cursive;
-    height:100%;
-    text-align:center;
-    font-size:18px;
-  }
-   
-  canvas{
-    color:white;
-    border: white solid 2px;
-    padding:15px;
-  }
-
-  #reset, #hint {
-    background-color: orange;
-    border: black;
-    color: white;
-    padding: 15px 15px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 28px;
-    border-radius: 16px;
-    width: 50%;
+body {
+  background: rgb(119, 223, 223);
+  font-family: 'Alkatra', cursive;
+  height:100%;
+  text-align: center;
+  font-size:18px;
 }
 
-  #alphabet {
-    margin:15px auto;
-    padding:0;
-    max-width:900px;
-  }
+canvas{
+  color:white;
+  border: white solid 4px;
+  padding:15px;
+}
+
+.reset {
+  background-color: orange;
+  border: black;
+  color: white;
+  padding: 15px 15px;
+  margin-left: auto;
+  text-decoration: none;
+  font-size: 28px;
+  font-family: 'Alkatra', cursive;
+  border-radius: 16px;
+  width: 50%;
+}
+
+.work {
+  width: fit-content;
+  margin: auto;
+}
+
+
+.alpha {
+  float:left;
+  margin: 0 10px 10px 0;
+  list-style:none;
+  width:35px;
+  height:50px;
+  padding-top:10px;
+  background: white;
+  cursor:pointer;
+  border: solid 3px black;
+}
+.alpha:hover {
+  background-color: rgb(29, 133, 153);
+  border: none;
+}
+.disabled {
+  pointer-events: none;
+  background-color: rgb(241, 156, 45);
+}
+
+.word-div {
+  display: inline-flex;
+  font-size: 33px;
+}
+.word {
+  margin-right: 1.5rem;
   
-  #alphabet li {
-    float:left;
-    margin: 0 10px 10px 0;
-    list-style:none;
-    width:35px;
-    height:50px;
-    padding-top:10px;
-    background: white;
-    cursor:pointer;
-    border: solid 3px black;
-  }
+}
 
-  #my-word li{
-    position: relative;
-    list-style: none;
-    display: inline-block;
-    font-size:55px;
-  }
+.notif {
+  position: absolute;
+  font-size: 20px;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fc8924;
+  width: 20rem;
+  padding: 20px 135px;
+  border-radius: 8px;
+  box-shadow: 3px 3px 1px 1px rgba(138, 135, 135, 0.2);
+}
+.notif-btn{
+  background-color: rgb(240, 240, 245);
+  font-size: 30px;
+  font-family: 'Alkatra', cursive;
+  border-radius: 16px;
+  border-width: 4px;
 
+}
+.blur {
+  filter: blur(2px);
+}
+.hidden {
+  display: none;
+}

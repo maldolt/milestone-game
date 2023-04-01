@@ -14,8 +14,8 @@ Letters
 Words
 
 --blank lines where words will go
--words that will be used: whale, turtle, fish
--this is the 'hold'
+-words that will be used: whale, shark, fish
+-this is the 'word-div'
 
 Lives
 

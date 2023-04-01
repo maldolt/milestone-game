@@ -1,52 +1,8 @@
- 
-  body {
-    background: rgb(119, 223, 223);
-    font-family: 'Alkatra', cursive;
-    height:100%;
-    text-align:center;
-    font-size:18px;
-  }
-   
-  canvas{
-    color:white;
-    border: white solid 2px;
-    padding:15px;
-  }
-
-  #reset, #hint {
-    background-color: orange;
-    border: black;
-    color: white;
-    padding: 15px 15px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 28px;
-    border-radius: 16px;
-    width: 50%;
+body {
+  background: rgb(119, 223, 223);
+  font-family: 'Alkatra', cursive;
+  height:100%;
+  text-align: center;
+  font-size:18px;
 }
-
-  #alphabet {
-    margin:15px auto;
-    padding:0;
-    max-width:900px;
-  }
-  
-  #alphabet li {
-    float:left;
-    margin: 0 10px 10px 0;
-    list-style:none;
-    width:35px;
-    height:50px;
-    padding-top:10px;
-    background: white;
-    cursor:pointer;
-    border: solid 3px black;
-  }
-
-  #my-word li{
-    position: relative;
-    list-style: none;
-    display: inline-block;
-    font-size:55px;
-  }
 

@@ -15,9 +15,9 @@ window.onload = function () {
     let showLives = document.getElementById("myLives");
 
     let list;
-    
+    //making buttons for letters
     buttons = function() {
-        myButtons = document.getElementById('buttons');
+        myButtons = document.getElementById('letter-buttons');
         letters = document.createElement('ul');
 
         for (let i=0; i < alphabet.length; i ++){
@@ -29,9 +29,10 @@ window.onload = function () {
             letters.appendChild(list);
         }
     }
+    //choosing a word
     result = function () {
         let space = 0;
-        wordHolder = document.getElementById("hold");
+        wordHolder = document.getElementById("answer-placement");
         correct = document.createElement('ul');
 
         for (var i = 0; i < word.length; i++){
@@ -44,6 +45,8 @@ window.onload = function () {
             } else { 
                 guess.innerHTML = "_";
             }
+            //seeing answer
+            console.log(word);
 
             guesses.push(guess);
             wordHolder.appendChild(correct);
@@ -62,33 +65,14 @@ window.onload = function () {
             }
         }
     }   
-    check = function (){
-        letters = document.querySelectorAll('alphabet li');
-        for(let i = 0; i < letters.length; i ++){
-           letters.onclick = function(){
-            let guess = (this.innerHTML);
-            this.setAttribute("class", "active");
-            this.onclick = null;
-            for (let i = 0; i < word.length; i ++){
-                if(word[i] === guess) {
-                    guesses[i].innerHTML = guess;
-                    counter += 1;
-                }
-            }
-            let x = (word.indexOf(guess));
-            if(x === -1) {
-                lives -= 1;
-            } else {
-                remaining();
-            }
-        } 
-        }
-        
-    }
-
-
+    
+    
     buttons();
     result();
     remaining();
     counter();
 }
+//testing play again function 
+resetButton.addEventListner("click", function(e){
+        
+})  
